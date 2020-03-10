@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class playerscript : MonoBehaviour
+public class Playerscript : MonoBehaviour
 {
     public Rigidbody rb; // Rigidbody = rb
 

@@ -2,10 +2,11 @@
 
 public class Collision : MonoBehaviour
 {
-    public playerscript movement;
-    private void OnCollisionEnter(Collision collisioninfo)
+    public Playerscript movement;
+
+     void OnCollisionEnter (Collision collisionInfo)
     {
-        if (collisioninfo.collider.tag = "Obstacle")
+        if (collisionInfo.collider.CompareTag("Obstacle"))
         {
             return;
         }
