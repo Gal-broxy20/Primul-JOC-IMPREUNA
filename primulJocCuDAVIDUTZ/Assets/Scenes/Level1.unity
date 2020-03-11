@@ -470,6 +470,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 852159401338774606}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1337155621 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 852159401338774606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1337155625 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
@@ -528,6 +534,11 @@ PrefabInstance:
       propertyPath: upForce
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1337155621}
     - target: {fileID: 852159400854552492, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: m_LocalPosition.x
