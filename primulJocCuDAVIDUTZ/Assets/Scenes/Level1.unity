@@ -2053,7 +2053,7 @@ PrefabInstance:
     - target: {fileID: 2928789294400990498, guid: 53ec44733bdc073439e4b8c1a56ca542,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 442
+      value: 1010.1
       objectReference: {fileID: 0}
     - target: {fileID: 2928789294400990498, guid: 53ec44733bdc073439e4b8c1a56ca542,
         type: 3}
@@ -2105,6 +2105,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: END TRIGGER
       objectReference: {fileID: 0}
+    - target: {fileID: 7480590994232492207, guid: 53ec44733bdc073439e4b8c1a56ca542,
+        type: 3}
+      propertyPath: stop
+      value: 
+      objectReference: {fileID: 1337155625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53ec44733bdc073439e4b8c1a56ca542, type: 3}
 --- !u!4 &2122242610 stripped
@@ -2204,6 +2209,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
