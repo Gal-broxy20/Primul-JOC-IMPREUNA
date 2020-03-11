@@ -1,13 +1,13 @@
 ﻿
 using UnityEngine;
 
-public class Playerscript : MonoBehaviour
+public class playerscript : MonoBehaviour
 {
     public Rigidbody rb; // Rigidbody = rb
-
+    
     public float forwardforce = 700f;
     public float sidewaysForce = 500f;
-    public float upForce = 10f;
+    public float upForce = 5f;
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardforce * Time.deltaTime);

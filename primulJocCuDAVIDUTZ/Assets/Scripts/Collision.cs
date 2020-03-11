@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour
+public class Collision : MonoBehaviour
 {
-    public Playerscript movement;
+    public playerscript movement;
 
-     void OnCollisionEnter (Collision collisionInfo)
+     void OnCollisionEnter (UnityEngine.Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Obstacle")
         {

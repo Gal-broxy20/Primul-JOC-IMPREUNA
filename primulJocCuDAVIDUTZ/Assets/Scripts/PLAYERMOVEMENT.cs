@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float forwardforce = 700f;
     public float sidewaysForce = 500f;
     public float upForce = 10f;
-    void FixedUpdate()
+    void Update()
     {
         rb.AddForce(0, 0, forwardforce * Time.deltaTime);
 
