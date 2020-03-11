@@ -2,10 +2,13 @@
 
 public class Endtrigger : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public playerscript stop;
-    private void OnTriggerEnter(Collider other)
+    
+    void OnTriggerEnter(UnityEngine.Collider other)
     {
         Debug.Log("Level Finished");
-        stop.enabled = false;
+        stop.enabled = false;       
     }
 }

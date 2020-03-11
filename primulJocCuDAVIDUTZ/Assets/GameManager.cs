@@ -1,18 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject completelevelUI;
+    bool GameHasEnded = false;
+    public void CompleteLevel () 
     {
-        
+    completelevelUI.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public float restartDelay = 2f;
+    public void Endgame ()
     {
-        
+        if (GameHasEnded == false) 
+        GameHasEnded = true;
+        Invoke("Restart", restartDelay);
+    }
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

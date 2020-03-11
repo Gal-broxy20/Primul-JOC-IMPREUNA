@@ -22,5 +22,9 @@ public class playerscript : MonoBehaviour
         }
         if (Input.GetKey("space"))
             rb.AddForce(0, upForce * Time.deltaTime, 0, ForceMode.VelocityChange);
+        if (rb.position.x < -9f)
+            FindObjectOfType<GameManager>().Endgame();
+        if (rb.position.x > 9f)
+            FindObjectOfType<GameManager>().Endgame();
     }
 }
