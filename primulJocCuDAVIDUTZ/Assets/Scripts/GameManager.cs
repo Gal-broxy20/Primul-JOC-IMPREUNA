@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class GameManager : MonoBehaviour
     completelevelUI.SetActive(true);
     }
 
-    public float restartDelay = 2f;
+    public float restartDelay = 1f;
     public void Endgame ()
     {
         if (GameHasEnded == false) 

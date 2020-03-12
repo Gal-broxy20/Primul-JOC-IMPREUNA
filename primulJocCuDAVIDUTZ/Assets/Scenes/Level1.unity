@@ -1928,6 +1928,11 @@ PrefabInstance:
       propertyPath: completelevelUI
       value: 
       objectReference: {fileID: 1496743238}
+    - target: {fileID: 1519654467768338458, guid: fac392a807fa4bb479c0c9e45d1282c9,
+        type: 3}
+      propertyPath: restartDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7423945736651481821, guid: fac392a807fa4bb479c0c9e45d1282c9,
         type: 3}
       propertyPath: m_Name
@@ -2152,7 +2157,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: forwardforce
-      value: 800
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
@@ -2162,7 +2167,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: upForce
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
@@ -2327,7 +2332,7 @@ PrefabInstance:
     - target: {fileID: 1760792636262529339, guid: dfe31ed4d57ad0c4dbce47b51979f7f7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 335
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 1760792636262529339, guid: dfe31ed4d57ad0c4dbce47b51979f7f7,
         type: 3}
