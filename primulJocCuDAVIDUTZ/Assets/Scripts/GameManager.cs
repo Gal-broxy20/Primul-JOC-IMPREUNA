@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     
     public void CompleteLevel () 
     {
-    completelevelUI.SetActive(true);
+        if(GameHasEnded == false)
+            completelevelUI.SetActive(true);
     }
 
     public float restartDelay = 1f;
