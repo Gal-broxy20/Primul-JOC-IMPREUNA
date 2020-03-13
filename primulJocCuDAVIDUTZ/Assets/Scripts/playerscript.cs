@@ -26,5 +26,7 @@ public class playerscript : MonoBehaviour
             FindObjectOfType<GameManager>().Endgame();
         if (rb.position.x > 9f)
             FindObjectOfType<GameManager>().Endgame();
+        if (rb.position.y < -1f)
+            FindObjectOfType<GameManager>().Endgame();
     }
 }
