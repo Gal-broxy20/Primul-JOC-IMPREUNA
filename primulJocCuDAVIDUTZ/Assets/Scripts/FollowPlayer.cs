@@ -12,6 +12,6 @@ public class FollowPlayer : MonoBehaviour
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed*Time.deltaTime);
         transform.position = smoothedPosition;
 
-        transform.LookAt(player);
+        
     }
 }
