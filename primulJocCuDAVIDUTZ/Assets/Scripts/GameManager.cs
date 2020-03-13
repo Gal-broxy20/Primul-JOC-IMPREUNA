@@ -44,4 +44,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level3");
     }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public GameObject levels;
+    public GameObject menu;
+    public void GoToLevelSelection()
+    {
+        menu.SetActive(false);
+        levels.SetActive(true);
+    }
 }

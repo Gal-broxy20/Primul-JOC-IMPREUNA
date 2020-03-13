@@ -292,7 +292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &226565082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1267,7 +1267,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1293801773}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1573759871}
+        m_MethodName: GoToLevelSelection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1293801773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,7 +1332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1525615334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1443,6 +1454,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519654467768338458, guid: fac392a807fa4bb479c0c9e45d1282c9,
+        type: 3}
+      propertyPath: levels
+      value: 
+      objectReference: {fileID: 1525615333}
+    - target: {fileID: 1519654467768338458, guid: fac392a807fa4bb479c0c9e45d1282c9,
+        type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 226565081}
     - target: {fileID: 7423945736651481821, guid: fac392a807fa4bb479c0c9e45d1282c9,
         type: 3}
       propertyPath: m_Name
