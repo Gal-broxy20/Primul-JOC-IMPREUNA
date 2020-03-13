@@ -32,4 +32,16 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void LoadLevel1  ()
+    {
+        SceneManager.LoadScene("Tutorial + Level1");
+    }
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
 }

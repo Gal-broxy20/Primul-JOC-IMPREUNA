@@ -5,8 +5,11 @@ public class score : MonoBehaviour
 {
     public Transform player;
     public Text scoreText;
+    public float offset = 5f;
+    float suma;
     void Update()
     {
-        scoreText.text = player.position.z.ToString("0");
+        suma = player.position.z - offset;
+        scoreText.text = suma.ToString("0");
     }
 }
