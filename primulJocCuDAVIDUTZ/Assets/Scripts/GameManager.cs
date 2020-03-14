@@ -57,4 +57,9 @@ public class GameManager : MonoBehaviour
         menu.SetActive(false);
         levels.SetActive(true);
     }
+    public void BackFromLevelSelection()
+    {
+        levels.SetActive(false);
+        menu.SetActive(true);
+    }
 }
