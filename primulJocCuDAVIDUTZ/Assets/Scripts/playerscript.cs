@@ -1,5 +1,4 @@
 ﻿
-using System;
 using UnityEngine;
 
 public class playerscript : MonoBehaviour
@@ -8,8 +7,8 @@ public class playerscript : MonoBehaviour
 
     public float forwardforce = 700f;
     public float sidewaysForce = 500f;
-    public float upForce = 5f;
-    public bool groundCheck = true;
+    //public float upForce = 5f;
+    
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardforce * Time.deltaTime);
@@ -22,11 +21,11 @@ public class playerscript : MonoBehaviour
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetKey("space") && rb.position.y == 1 )
-       {
+        //if (Input.GetKey("space") && rb.position.y == 1 )
+       //{
             
-            rb.AddForce(0, upForce * Time.deltaTime, 0, ForceMode.VelocityChange);
-        }
+        //    rb.AddForce(0, upForce * Time.deltaTime, 0, ForceMode.VelocityChange);
+        //}
    
            
 
