@@ -3167,8 +3167,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061307376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.199951}
-  m_LocalScale: {x: 15.221612, y: 35.468, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 15, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
@@ -6213,6 +6213,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.513411
       objectReference: {fileID: 0}
+    - target: {fileID: 153520036372996091, guid: 3ebdf7f5cb692e7409ab41319cfb9c22,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 153520036372996092, guid: 3ebdf7f5cb692e7409ab41319cfb9c22,
         type: 3}
       propertyPath: m_Name
@@ -6235,7 +6240,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: forwardforce
-      value: 1000
+      value: 1450
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
@@ -6245,7 +6250,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: upForce
-      value: 50
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
@@ -6310,12 +6315,17 @@ PrefabInstance:
     - target: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: m_Drag
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

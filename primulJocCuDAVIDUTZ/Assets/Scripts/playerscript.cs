@@ -1,13 +1,15 @@
 ﻿
+using System;
 using UnityEngine;
 
 public class playerscript : MonoBehaviour
 {
     public Rigidbody rb; // Rigidbody = rb
-    
+
     public float forwardforce = 700f;
     public float sidewaysForce = 500f;
     public float upForce = 5f;
+    public bool groundCheck = true;
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardforce * Time.deltaTime);
@@ -20,8 +22,14 @@ public class playerscript : MonoBehaviour
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") && rb.position.y == 1 )
+       {
+            
             rb.AddForce(0, upForce * Time.deltaTime, 0, ForceMode.VelocityChange);
+        }
+   
+           
+
         if (rb.position.x < -9f)
             FindObjectOfType<GameManager>().Endgame();
         if (rb.position.x > 9f)
@@ -29,4 +37,9 @@ public class playerscript : MonoBehaviour
         if (rb.position.y < -1f)
             FindObjectOfType<GameManager>().Endgame();
     }
+
+   
+
+      
+
 }
