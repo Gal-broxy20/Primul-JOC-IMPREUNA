@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject levels;
     public GameObject menu;
+    public GameObject settings;
     public void GoToLevelSelection()
     {
         menu.SetActive(false);
@@ -60,6 +61,16 @@ public class GameManager : MonoBehaviour
     public void BackFromLevelSelection()
     {
         levels.SetActive(false);
+        menu.SetActive(true);
+    }
+    public void GoToSettings()
+    {
+        menu.SetActive(false);
+        settings.SetActive(true);
+    }
+    public void BackFromSettings()
+    {
+        settings.SetActive(false);
         menu.SetActive(true);
     }
 }
