@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class scortrigger : MonoBehaviour
 {
-    public GameObject score;
+    public GameManager gameManager;
+    
     private void OnTriggerEnter(Collider other)
     {
-        score.SetActive(true);
+        gameManager.LoadNextLevel();
 
     }
 }
