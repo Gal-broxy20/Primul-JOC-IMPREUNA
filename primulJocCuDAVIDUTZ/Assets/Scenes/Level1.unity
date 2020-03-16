@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.91372555, g: 0.91372555, b: 0.91372555, a: 1}
+  m_FogColor: {r: 0.18039216, g: 0.121568635, b: 0.14901961, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.03
+  m_FogDensity: 0.025
   m_LinearFogStart: 6.06
   m_LinearFogEnd: 309.8
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: c82a334cf5a5e47978749c210cee72a7, type: 2}
   m_HaloStrength: 0.128
   m_FlareStrength: 1
   m_FlareFadeSpeed: 5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4514305, g: 0.5008008, b: 0.57166225, a: 1}
+  m_IndirectSpecularColor: {r: 0.12962055, g: 0.09422024, b: 0.12407065, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -157,8 +157,8 @@ Camera:
   m_GameObject: {fileID: 66677762}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -776,8 +776,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.6117647, g: 0.24313727, b: 0.16078432, a: 1}
+  m_Intensity: 1.42
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -816,13 +816,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -0.65139765, z: -0.47603086, w: 0.59082633}
+  m_BoundingSphereOverride: {x: 1.8e-43, y: 1.1383587e+10, z: 6.96e-43, w: 1.95e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -833,13 +833,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
-  m_LocalRotation: {x: 0.2519041, y: -0.33466798, z: 0.043271445, w: 0.90701115}
-  m_LocalPosition: {x: 0.66, y: 5.17, z: 6.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.059487876, y: -0.99722785, z: 0.04442951, w: 0.004888321}
+  m_LocalPosition: {x: 0.66, y: 12.56, z: 3179}
+  m_LocalScale: {x: 1, y: 1.1575, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 29.073002, y: -42.042004, z: -5.918}
+  m_LocalEulerAnglesHint: {x: 5.117, y: -179.74301, z: -6.8160005}
 --- !u!1001 &172141941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2937,9 +2937,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.449816, b: 1, a: 1}
-    m_PressedColor: {r: 0.07075471, g: 0.3390647, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0, g: 0.449816, b: 1, a: 0.23529412}
+    m_PressedColor: {r: 0.07075471, g: 0.3390647, b: 1, a: 0.3882353}
     m_SelectedColor: {r: 0.25, g: 0.61234426, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -4823,7 +4823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39607844}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5971,7 +5971,22 @@ PrefabInstance:
     - target: {fileID: 1760792636262529336, guid: dfe31ed4d57ad0c4dbce47b51979f7f7,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760792636262529336, guid: dfe31ed4d57ad0c4dbce47b51979f7f7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760792636262529336, guid: dfe31ed4d57ad0c4dbce47b51979f7f7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760792636262529336, guid: dfe31ed4d57ad0c4dbce47b51979f7f7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.16078432
       objectReference: {fileID: 0}
     - target: {fileID: 1760792636262529338, guid: dfe31ed4d57ad0c4dbce47b51979f7f7,
         type: 3}
@@ -6162,6 +6177,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3137.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2912315798344763724, guid: cafb3b52f184322409e69c0a3388c86d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afbf04498f65ce4a83bb311507b023d, type: 2}
     - target: {fileID: 2912315798344763725, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
       propertyPath: m_Material
