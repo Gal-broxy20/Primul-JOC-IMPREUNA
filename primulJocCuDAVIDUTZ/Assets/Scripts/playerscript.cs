@@ -8,7 +8,18 @@ public class playerscript : MonoBehaviour
     public float forwardforce = 700f;
     public float sidewaysForce = 500f;
     //public float upForce = 5f;
+
+
+    public playerscript movement;
+    public AudioSource music;
+    public float pitch = 0;
+    public GameObject fallScreen; 
+    public GameObject score;
+
+   
+
     
+
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardforce * Time.deltaTime);
@@ -21,20 +32,19 @@ public class playerscript : MonoBehaviour
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        //if (Input.GetKey("space") && rb.position.y == 1 )
-       //{
-            
-        //    rb.AddForce(0, upForce * Time.deltaTime, 0, ForceMode.VelocityChange);
-        //}
-   
-           
 
-        if (rb.position.x < -10f)
-            FindObjectOfType<GameManager>().Endgame();
-        if (rb.position.x > 10f)
-            FindObjectOfType<GameManager>().Endgame();
-        if (rb.position.y < -2f)
-            FindObjectOfType<GameManager>().Endgame();
+        Collision playerScript = GameObject.Find("Player").GetComponent<Collision>();
+
+        if (rb.position.x < -10f || rb.position.x > 10f || rb.position.y < -2f)
+        {
+            movement.enabled = false;
+            fallScreen.SetActive(true);
+            music.pitch = pitch;
+            score.SetActive(false);
+            playerScript.GameHasEnded = true;
+        }
+        
+            
     }
 
    

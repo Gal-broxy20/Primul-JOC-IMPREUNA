@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class Collision : MonoBehaviour
 {
     public playerscript movement;
-    public GameManager GM; // GM - game manager
     public AudioSource crashsound;
     public AudioSource music;
-    public float pitch;
+    public float pitch = 0;
     public GameObject crashScreen;
     public GameObject score;
     public bool GameHasEnded = false;
