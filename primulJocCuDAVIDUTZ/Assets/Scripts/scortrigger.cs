@@ -9,6 +9,7 @@ public class scortrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         gameManager.LoadNextLevel();
-
     }
+
+    
 }

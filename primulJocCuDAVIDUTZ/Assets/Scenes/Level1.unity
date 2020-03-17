@@ -4364,6 +4364,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 1337155625}
   GM: {fileID: 1795508706}
+  crashsound: {fileID: 0}
+  music: {fileID: 1337155622}
+  pitch: 0
+  crashScreen: {fileID: 0}
 --- !u!1001 &1354226468
 PrefabInstance:
   m_ObjectHideFlags: 0

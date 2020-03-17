@@ -29,11 +29,11 @@ public class playerscript : MonoBehaviour
    
            
 
-        if (rb.position.x < -9f)
+        if (rb.position.x < -10f)
             FindObjectOfType<GameManager>().Endgame();
-        if (rb.position.x > 9f)
+        if (rb.position.x > 10f)
             FindObjectOfType<GameManager>().Endgame();
-        if (rb.position.y < -1f)
+        if (rb.position.y < -2f)
             FindObjectOfType<GameManager>().Endgame();
     }
 

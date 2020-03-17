@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Collision : MonoBehaviour
 {
@@ -10,16 +11,18 @@ public class Collision : MonoBehaviour
     public AudioSource music;
     public float pitch;
     public GameObject crashScreen;
+    public GameObject score;
     
-     void OnCollisionEnter (UnityEngine.Collision collisionInfo)
+     void OnCollisionEnter(UnityEngine.Collision collision)
     {
-        if (collisionInfo.collider.tag == "Obstacle")
+        if (collision.collider.tag == "Obstacle")
+
         {
             movement.enabled = false;
             crashScreen.SetActive(true);
             crashsound.Play();
             music.pitch = pitch;
-   
+            score.SetActive(false);
         }
          
        
