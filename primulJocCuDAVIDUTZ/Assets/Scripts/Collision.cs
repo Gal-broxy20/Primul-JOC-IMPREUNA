@@ -19,6 +19,7 @@ public class Collision : MonoBehaviour
             crashScreen.SetActive(true);
             crashsound.Play();
             music.pitch = pitch;
+   
         }
          
        

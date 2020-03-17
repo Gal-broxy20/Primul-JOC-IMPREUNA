@@ -2284,6 +2284,7 @@ GameObject:
   - component: {fileID: 600253796}
   - component: {fileID: 600253798}
   - component: {fileID: 600253797}
+  - component: {fileID: 600253799}
   m_Layer: 5
   m_Name: Avoid Obstacles!
   m_TagString: Untagged
@@ -2350,6 +2351,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600253795}
   m_CullTransparentMesh: 0
+--- !u!95 &600253799
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600253795}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 373cbad21dbb33440b0de471925e8162, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &632584561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,6 +3430,7 @@ GameObject:
   - component: {fileID: 912337373}
   - component: {fileID: 912337375}
   - component: {fileID: 912337374}
+  - component: {fileID: 912337376}
   m_Layer: 5
   m_Name: CrashScreen
   m_TagString: Untagged
@@ -3476,6 +3497,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912337372}
   m_CullTransparentMesh: 0
+--- !u!95 &912337376
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912337372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 940ea0734b05f354b9b304efacac52d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &928182088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7460,7 +7500,6 @@ GameObject:
   - component: {fileID: 1912135151}
   - component: {fileID: 1912135152}
   - component: {fileID: 1912135153}
-  - component: {fileID: 1912135154}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7673,25 +7712,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &1912135154
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912135146}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4c9a9c7a16f62844b9c5373a7c58dd5e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1924235632
 PrefabInstance:
   m_ObjectHideFlags: 0
