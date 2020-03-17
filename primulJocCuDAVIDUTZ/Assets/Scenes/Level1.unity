@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2122242610}
-  smoothSpeed: 20
+  smoothSpeed: 70
   offset: {x: 0, y: 1.25, z: -1.5}
 --- !u!1001 &72193408
 PrefabInstance:
@@ -5284,6 +5284,7 @@ MonoBehaviour:
   pitch: 0
   crashScreen: {fileID: 861112002}
   score: {fileID: 1443861771}
+  GameHasEnded: 0
 --- !u!1001 &1354226468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6896,7 +6897,7 @@ PrefabInstance:
     - target: {fileID: 2928789294400990498, guid: 53ec44733bdc073439e4b8c1a56ca542,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1575
+      value: 19975
       objectReference: {fileID: 0}
     - target: {fileID: 2928789294400990498, guid: 53ec44733bdc073439e4b8c1a56ca542,
         type: 3}
@@ -7377,7 +7378,7 @@ PrefabInstance:
     - target: {fileID: 2912315798344763714, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1500
+      value: 9990
       objectReference: {fileID: 0}
     - target: {fileID: 2912315798344763714, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
@@ -7427,7 +7428,7 @@ PrefabInstance:
     - target: {fileID: 2912315798344763714, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3137.5
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2912315798344763724, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
