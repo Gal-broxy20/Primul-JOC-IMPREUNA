@@ -9,18 +9,23 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+    
+
     public GameObject pauseMenuUI;
 
     public AudioSource player;
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        Collision playerScript = GameObject.Find("Player").GetComponent<Collision>();
+
+        if(Input.GetKeyDown(KeyCode.Escape) && playerScript.GameHasEnded == false)
         {
             if(GameIsPaused)
             {
                 Resume();
-            } else
+            }
+            if(GameIsPaused == false)
             {
                 Pause();
             }

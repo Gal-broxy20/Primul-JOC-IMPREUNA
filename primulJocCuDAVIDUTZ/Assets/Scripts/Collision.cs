@@ -12,6 +12,7 @@ public class Collision : MonoBehaviour
     public float pitch;
     public GameObject crashScreen;
     public GameObject score;
+    public bool GameHasEnded = false;
     
      void OnCollisionEnter(UnityEngine.Collision collision)
     {
@@ -23,6 +24,7 @@ public class Collision : MonoBehaviour
             crashsound.Play();
             music.pitch = pitch;
             score.SetActive(false);
+            GameHasEnded = true;
         }
          
        
