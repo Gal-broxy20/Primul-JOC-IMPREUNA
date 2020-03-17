@@ -6,11 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public GameObject completelevelUI;
     bool GameHasEnded = false;
-    
-    public void CompleteLevel () 
+    public GameObject score;
+
+    public void CompleteLevel()
     {
-        if(GameHasEnded == false)
+        if (GameHasEnded == false)
+        {
             completelevelUI.SetActive(true);
+            score.SetActive(false);
+        }
     }
 
     public float restartDelay = 1f;
