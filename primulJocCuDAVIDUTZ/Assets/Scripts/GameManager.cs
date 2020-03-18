@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,25 +19,25 @@ public class GameManager : MonoBehaviour
     }
 
     public float restartDelay = 1f;
-    public void Endgame ()
+    public void Endgame()
     {
-        if (GameHasEnded == false) 
-        GameHasEnded = true;
+        if (GameHasEnded == false)
+            GameHasEnded = true;
         Invoke("Restart", restartDelay);
-        
+
     }
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    
 
-    public void LoadNextLevel ()
+
+    public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LoadLevel1  ()
+    public void LoadLevel1()
     {
         SceneManager.LoadScene("Tutorial + Level1");
     }
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
     public GameObject levels;
     public GameObject menu;
     public GameObject settings;
+    public GameObject QuitPanel;
     public void GoToLevelSelection()
     {
         menu.SetActive(false);
@@ -82,5 +84,37 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Quitting game...");
         Application.Quit();
+    }
+    public void QuitPanelOpen()
+    {
+        QuitPanel.SetActive(true);
+    }
+    public void QuitPanelClose()
+    {
+        QuitPanel.SetActive(false);
+    }
+
+    public GameObject loadingScreen;
+    public Slider slider;
+    public Text loadProgress;
+    public void Play(int sceneIndex)
+    {
+        StartCoroutine(LoadAsynchronously(sceneIndex));
+
+    }
+
+    IEnumerator LoadAsynchronously(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            loadProgress.text = progress * 100f + "%";
+            yield return null;
+        }
     }
 }
