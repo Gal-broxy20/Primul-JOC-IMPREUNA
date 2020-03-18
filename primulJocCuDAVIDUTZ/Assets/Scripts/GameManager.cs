@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public float restartDelay = 1f;
+    public float restartDelay = 0f;
     public void Endgame()
     {
         if (GameHasEnded == false)
@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
     public GameObject levels;
     public GameObject menu;
     public GameObject settings;
-    public GameObject QuitPanel;
     public void GoToLevelSelection()
     {
         menu.SetActive(false);
@@ -85,16 +84,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
-    public void QuitPanelOpen()
-    {
-        QuitPanel.SetActive(true);
-    }
-    public void QuitPanelClose()
-    {
-        QuitPanel.SetActive(false);
-    }
+
 
     public GameObject loadingScreen;
+    public GameObject darkLoadingScreen;
     public Slider slider;
     public Text loadProgress;
     public void Play(int sceneIndex)
@@ -106,9 +99,13 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-
-        loadingScreen.SetActive(true);
-
+        if (DarkTheme)
+        {
+            darkLoadingScreen.SetActive(true);
+        } else
+        {
+            loadingScreen.SetActive(true);
+        }
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
@@ -119,14 +116,24 @@ public class GameManager : MonoBehaviour
     }
     public GameObject switchtodark;
     public GameObject switchtolight;
+    public bool DarkTheme = false;
     public void GoDark ()
     {
-        switchtodark.SetActive(true);
-        switchtolight.SetActive(false);
+        if (!DarkTheme)
+        {
+            switchtodark.SetActive(true);
+            switchtolight.SetActive(false);
+            DarkTheme = true;
+        }
+
     }
     public void GoLight ()
     {
-        switchtolight.SetActive(true);
-        switchtodark.SetActive(false);
+        if (DarkTheme)
+        {
+            switchtolight.SetActive(true);
+            switchtodark.SetActive(false);
+            DarkTheme = false;
+        }
     }
 }

@@ -59,4 +59,13 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
+    public GameObject quitPanel;
+    public void quitPanelOpen()
+    {
+        quitPanel.SetActive(true);
+    }
+    public void quitPanelClose()
+    {
+        quitPanel.SetActive(false);
+    }
 }
