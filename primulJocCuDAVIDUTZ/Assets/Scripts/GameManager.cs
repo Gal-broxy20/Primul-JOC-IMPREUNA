@@ -77,4 +77,10 @@ public class GameManager : MonoBehaviour
         settings.SetActive(false);
         menu.SetActive(true);
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting game...");
+        Application.Quit();
+    }
 }
