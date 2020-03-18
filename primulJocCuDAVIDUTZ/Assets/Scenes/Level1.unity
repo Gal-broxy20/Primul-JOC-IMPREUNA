@@ -3996,6 +3996,7 @@ GameObject:
   - component: {fileID: 861112006}
   - component: {fileID: 861112005}
   - component: {fileID: 861112004}
+  - component: {fileID: 861112007}
   m_Layer: 5
   m_Name: CrashScreen
   m_TagString: Untagged
@@ -4086,6 +4087,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861112002}
   m_CullTransparentMesh: 0
+--- !u!114 &861112007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861112002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59d6ec6e106d9c47ad64681765bf5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &910976029
 GameObject:
   m_ObjectHideFlags: 0
@@ -6858,6 +6871,7 @@ GameObject:
   - component: {fileID: 1431924776}
   - component: {fileID: 1431924775}
   - component: {fileID: 1431924774}
+  - component: {fileID: 1431924777}
   m_Layer: 5
   m_Name: FallScreen
   m_TagString: Untagged
@@ -6948,6 +6962,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431924772}
   m_CullTransparentMesh: 0
+--- !u!114 &1431924777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431924772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59d6ec6e106d9c47ad64681765bf5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1443861769
 PrefabInstance:
   m_ObjectHideFlags: 0
