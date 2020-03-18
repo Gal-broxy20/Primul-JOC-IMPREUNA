@@ -117,4 +117,16 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
+    public GameObject switchtodark;
+    public GameObject switchtolight;
+    public void GoDark ()
+    {
+        switchtodark.SetActive(true);
+        switchtolight.SetActive(false);
+    }
+    public void GoLight ()
+    {
+        switchtolight.SetActive(true);
+        switchtodark.SetActive(false);
+    }
 }
