@@ -5,14 +5,14 @@ public class playerscript : MonoBehaviour
 {
     public Rigidbody rb; // Rigidbody = rb
 
-    public float forwardforce = 700f;
-    public float sidewaysForce = 50f;
+    public float forwardforce = 1200f;
+    public float sidewaysForce = 70f;
     //public float upForce = 5f;
 
 
     public playerscript movement;
     public AudioSource music;
-    public float pitch = 0;
+    public float pitch = 0.7f;
     public GameObject fallScreen; 
     public GameObject score;
 

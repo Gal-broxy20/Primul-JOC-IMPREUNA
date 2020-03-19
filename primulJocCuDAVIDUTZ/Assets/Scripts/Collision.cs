@@ -8,7 +8,7 @@ public class Collision : MonoBehaviour
     public playerscript movement;
     public AudioSource crashsound;
     public AudioSource music;
-    public float pitch = 0;
+    public float pitch = 0.65f;
     public GameObject crashScreen;
     public GameObject score;
     public bool GameHasEnded = false;
