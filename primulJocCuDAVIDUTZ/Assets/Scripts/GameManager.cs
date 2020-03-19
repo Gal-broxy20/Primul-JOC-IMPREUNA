@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadLevel1()
     {
-        SceneManager.LoadScene("Tutorial + Level1");
+        SceneManager.LoadScene("Level1");
     }
     public void LoadLevel2()
     {
