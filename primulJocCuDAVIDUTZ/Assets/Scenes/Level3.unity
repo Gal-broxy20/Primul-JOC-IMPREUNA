@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4514305, g: 0.5008008, b: 0.57166225, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4363,7 +4363,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1337155625}
-  GM: {fileID: 1795508706}
+  crashsound: {fileID: 0}
+  music: {fileID: 0}
+  pitch: 0.65
+  crashScreen: {fileID: 0}
+  score: {fileID: 0}
+  GameHasEnded: 0
 --- !u!1001 &1354226468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5274,8 +5279,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d6d95c2032c9b46aa99e7cc2d33f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 1281351144}
   player: {fileID: 1337155622}
+  ResumeCountdown: {fileID: 0}
+  quitPanel: {fileID: 0}
+  QuitPanelIsOpen: 0
 --- !u!1001 &1944879125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5938,6 +5947,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 852159400854552494, guid: 62141506da87f0540a480f981a58ebc3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8048d13ecd9d8634c89812fc74ecc502, type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 62141506da87f0540a480f981a58ebc3, type: 3}

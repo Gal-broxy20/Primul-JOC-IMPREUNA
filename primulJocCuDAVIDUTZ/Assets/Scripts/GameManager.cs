@@ -136,4 +136,15 @@ public class GameManager : MonoBehaviour
             DarkTheme = false;
         }
     }
+    public GameObject Achievements;
+    public void AchievementTab ()
+    {
+        menu.SetActive(false);
+        Achievements.SetActive(true);
+    }
+    public void BackFromAchievements ()
+    {
+        menu.SetActive(true);
+        Achievements.SetActive(false);
+    }
 }
