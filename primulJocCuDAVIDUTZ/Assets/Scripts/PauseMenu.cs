@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public  bool GameIsPaused = false;
 
     
 
@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
     {
         Collision playerScript = GameObject.Find("Player").GetComponent<Collision>();
 
-        if(Input.GetKeyDown(KeyCode.Escape) && playerScript.GameHasEnded == false)
+        if(Input.GetKeyDown(KeyCode.Escape) && playerScript.GameHasEnded == false && QuitPanelIsOpen == false)
         {
             if(GameIsPaused)
             {
@@ -32,12 +32,12 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public GameObject ResumeCountdown;
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-        player.pitch = 1f;
+        ResumeCountdown.SetActive(true);
+        
     }
 
     void Pause()
@@ -60,12 +60,15 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
     public GameObject quitPanel;
+    public bool QuitPanelIsOpen = false;
     public void quitPanelOpen()
     {
         quitPanel.SetActive(true);
+        QuitPanelIsOpen = true;
     }
     public void quitPanelClose()
     {
         quitPanel.SetActive(false);
+        QuitPanelIsOpen = false;
     }
 }
