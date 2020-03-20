@@ -20,6 +20,7 @@ public class Collision : MonoBehaviour
         {
             movement.enabled = false;
             crashScreen.SetActive(true);
+            if(GameHasEnded == false)
             crashsound.Play();
             music.pitch = pitch;
             score.SetActive(false);
