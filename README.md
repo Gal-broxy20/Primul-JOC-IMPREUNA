@@ -1,2 +1,3 @@
-# Primul-JOC-IMPREUNA
-vedem
+# CUBE RUSH
+AVOID OBSTACLEs
+
