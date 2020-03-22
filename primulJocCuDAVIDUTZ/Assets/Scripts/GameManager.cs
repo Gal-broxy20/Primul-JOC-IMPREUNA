@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
     public Text loadProgress;
     public void Play(int sceneIndex)
     {
+        sceneIndex = PlayerPrefs.GetInt("Progress");
         StartCoroutine(LoadAsynchronously(sceneIndex));
 
     }
