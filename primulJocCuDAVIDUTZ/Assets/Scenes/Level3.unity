@@ -2097,7 +2097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResumeCountdown: {fileID: 410486044}
-  player: {fileID: 0}
+  player: {fileID: 1337155622}
 --- !u!95 &410486046
 Animator:
   serializedVersion: 3
@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameIsPaused: 0
   pauseMenuUI: {fileID: 2100166716}
-  player: {fileID: 0}
+  player: {fileID: 1337155622}
   ResumeCountdown: {fileID: 410486044}
   quitPanel: {fileID: 237506729}
   QuitPanelIsOpen: 0

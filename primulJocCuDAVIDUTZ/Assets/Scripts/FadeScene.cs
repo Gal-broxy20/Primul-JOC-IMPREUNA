@@ -10,5 +10,9 @@ public class FadeScene : MonoBehaviour
     {
         image.SetActive(false);
     } 
+    public void SetImageActive()
+    {
+        image.SetActive(true);
+    }
     
 }
