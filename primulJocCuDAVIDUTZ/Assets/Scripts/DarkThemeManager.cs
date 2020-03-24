@@ -5,31 +5,55 @@ using UnityEngine.UI;
 
 public class DarkThemeManager : MonoBehaviour
 {
-    public GameObject Menu;
-    public GameObject Levels;
-    public GameObject Settings;
-    
-    
+    public GameObject levels;
+    public GameObject menu;
+    public GameObject settings;
     public void GoToLevelSelection()
     {
-        Menu.SetActive(false);
-        Levels.SetActive(true); 
+        StartCoroutine(GoToLevelSelectionC());
+    }
+    IEnumerator GoToLevelSelectionC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        menu.SetActive(false);
+        levels.SetActive(true);
     }
     public void BackFromLevelSelection()
     {
-        Levels.SetActive(false);
-        Menu.SetActive(true);
+        StartCoroutine(BackFromLevelSelectionC());
     }
+    IEnumerator BackFromLevelSelectionC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        levels.SetActive(false);
+        menu.SetActive(true);
+    }
+
     public void GoToSettings()
     {
-        Menu.SetActive(false);
-        Settings.SetActive(true);
+        StartCoroutine(GoToSettingsC());
     }
+
+    IEnumerator GoToSettingsC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        menu.SetActive(false);
+        settings.SetActive(true);
+
+    }
+
     public void BackFromSettings()
     {
-        Settings.SetActive(false);
-        Menu.SetActive(true);
-        
+        StartCoroutine(BackFromSettingsC());
+    }
+
+    IEnumerator BackFromSettingsC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        settings.SetActive(false);
+        menu.SetActive(true);
+
+
     }
 
 }

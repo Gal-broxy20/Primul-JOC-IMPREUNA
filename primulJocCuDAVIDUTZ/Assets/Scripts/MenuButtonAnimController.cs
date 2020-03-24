@@ -21,8 +21,9 @@ public class MenuButtonAnimController : MonoBehaviour
         if(!animator.GetBool("DarkTheme"))
         {
             animator.SetBool("DarkTheme", true);
-        } else
-        {
+
+        }
+        else { 
             animator.SetBool("DarkTheme", false);
         }
     }
