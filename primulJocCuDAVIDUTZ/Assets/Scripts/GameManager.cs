@@ -151,20 +151,31 @@ public class GameManager : MonoBehaviour
     {
         if (!DarkTheme)
         {
-            switchtodark.SetActive(true);
-            switchtolight.SetActive(false);
-            DarkTheme = true;
+            StartCoroutine(GoDarkC());
         }
+        
+    }
 
+    IEnumerator GoDarkC()
+    {
+        yield return new WaitForSeconds(0.3f);
+        switchtodark.SetActive(true);
+        switchtolight.SetActive(false);
+        DarkTheme = true;
     }
     public void GoLight ()
     {
         if (DarkTheme)
         {
-            switchtolight.SetActive(true);
-            switchtodark.SetActive(false);
-            DarkTheme = false;
+            StartCoroutine(GoLightC());
         }
+    }
+    IEnumerator GoLightC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        switchtolight.SetActive(true);
+        switchtodark.SetActive(false);
+        DarkTheme = false;
     }
     public GameObject Achievements;
     public void AchievementTab ()

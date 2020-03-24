@@ -11,11 +11,19 @@ public class MenuButtonAnimController : MonoBehaviour
         if(!animator.GetBool("ButtonPress"))
         {
             animator.SetBool("ButtonPress", true);
-            animator.SetBool("2ndButton", false);
         } else
         {
-            animator.SetBool("2ndButton", true);
             animator.SetBool("ButtonPress", false);
+        }
+    }
+    public void ThemeButtonPressed()
+    {
+        if(!animator.GetBool("DarkTheme"))
+        {
+            animator.SetBool("DarkTheme", true);
+        } else
+        {
+            animator.SetBool("DarkTheme", false);
         }
     }
 }
