@@ -60,23 +60,50 @@ public class GameManager : MonoBehaviour
     public GameObject settings;
     public void GoToLevelSelection()
     {
+        StartCoroutine(GoToLevelSelectionC());
+    }
+    IEnumerator GoToLevelSelectionC()
+    {
+        yield return new WaitForSeconds(0.25f);
         menu.SetActive(false);
         levels.SetActive(true);
     }
     public void BackFromLevelSelection()
     {
+        StartCoroutine(BackFromLevelSelectionC());
+    }
+    IEnumerator BackFromLevelSelectionC()
+    {
+        yield return new WaitForSeconds(0.25f);
         levels.SetActive(false);
         menu.SetActive(true);
     }
+    
     public void GoToSettings()
     {
+        StartCoroutine(GoToSettingsC());
+    }
+
+    IEnumerator GoToSettingsC()
+    {
+        yield return new WaitForSeconds(0.25f);
         menu.SetActive(false);
         settings.SetActive(true);
+
     }
+    
     public void BackFromSettings()
     {
+        StartCoroutine(BackFromSettingsC());
+    }
+
+    IEnumerator BackFromSettingsC()
+    {
+        yield return new WaitForSeconds(0.25f);
         settings.SetActive(false);
         menu.SetActive(true);
+        
+
     }
 
     public void QuitGame()
@@ -99,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        yield return new WaitForSeconds(0.25f);
         if (DarkTheme)
         {
             darkLoadingScreen.SetActive(true);
@@ -107,6 +134,8 @@ public class GameManager : MonoBehaviour
         {
             loadingScreen.SetActive(true);
         }
+        yield return new WaitForSeconds(1.5f);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
@@ -140,12 +169,26 @@ public class GameManager : MonoBehaviour
     public GameObject Achievements;
     public void AchievementTab ()
     {
+        StartCoroutine(AchievementTabC());
+    }
+
+    IEnumerator AchievementTabC()
+    {
+        yield return new WaitForSeconds(0.25f);
         menu.SetActive(false);
         Achievements.SetActive(true);
     }
     public void BackFromAchievements ()
     {
-        menu.SetActive(true);
-        Achievements.SetActive(false);
+        StartCoroutine(BackFromAchievementsC());
     }
+
+    IEnumerator BackFromAchievementsC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        Achievements.SetActive(false);
+        menu.SetActive(true);
+    }
+
+
 }
