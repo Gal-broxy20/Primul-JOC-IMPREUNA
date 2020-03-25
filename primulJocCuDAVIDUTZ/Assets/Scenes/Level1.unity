@@ -2544,8 +2544,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 270}
-  m_SizeDelta: {x: 511.2, y: 216.6}
+  m_AnchoredPosition: {x: 0, y: 293.9}
+  m_SizeDelta: {x: 511.2, y: 168.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220228180
 MonoBehaviour:
@@ -2725,7 +2725,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -18.5}
-  m_SizeDelta: {x: 276.7, y: 102.5}
+  m_SizeDelta: {x: 276.69995, y: 102.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263465102
 MonoBehaviour:
@@ -2747,11 +2747,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 37c288423ef185042907f0447e5879dc, type: 3}
-    m_FontSize: 36
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 6
+    m_MaxSize: 101
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6239,7 +6239,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 270}
-  m_SizeDelta: {x: 127.8, y: 102.5}
+  m_SizeDelta: {x: 422.7, y: 102.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840392373
 MonoBehaviour:
@@ -9290,7 +9290,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000017166, y: 310.75006}
-  m_SizeDelta: {x: 624, y: 145.7}
+  m_SizeDelta: {x: 791.4, y: 145.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332425187
 MonoBehaviour:
@@ -9323,7 +9323,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: What a noob...
+  m_Text: Stay on the platform!
 --- !u!222 &1332425188
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10538,7 +10538,8 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1760792636262529334, guid: dfe31ed4d57ad0c4dbce47b51979f7f7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dfe31ed4d57ad0c4dbce47b51979f7f7, type: 3}
 --- !u!114 &1443861770 stripped
 MonoBehaviour:
@@ -10592,7 +10593,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443861771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba677fdcf4b499849b5b45514670a4b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 52565f63379816848b7175aaa67a2616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2122242610}
@@ -10600,6 +10601,8 @@ MonoBehaviour:
   offset: 0
   highScore: {fileID: 263465102}
   NewHighScoreText: {fileID: 1556079676}
+  FallNewHighScore: {fileID: 284262284}
+  FallHighScore: {fileID: 24990060}
 --- !u!1001 &1451758645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14267,7 +14270,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: m_Drag
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
@@ -14277,7 +14280,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552493, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: m_Constraints
-      value: 32
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552494, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
