@@ -10,5 +10,9 @@ public class CrashScreen : MonoBehaviour
         {
             FindObjectOfType<GameManager>().Endgame();
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            FindObjectOfType<GameManager>().LoadMenu();
+        }
     }
 }
