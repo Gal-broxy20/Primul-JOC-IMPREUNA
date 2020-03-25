@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class tutorialcollison : MonoBehaviour
 {
-    public playerscript movement;
+    public TutorialMovement movement;
     public GameManager GM; // GM - game manager
     public AudioSource crashsound;
     public AudioSource music;

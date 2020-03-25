@@ -35,7 +35,7 @@ public class playerscript : MonoBehaviour
 
         Collision playerScript = GameObject.Find("Player").GetComponent<Collision>();
 
-        if (rb.position.x < -25f || rb.position.x > 25f || rb.position.y < -2f)
+        if (rb.position.x < -15f || rb.position.x > 15f || rb.position.y < -1f)
         {
             movement.enabled = false;
             fallScreen.SetActive(true);

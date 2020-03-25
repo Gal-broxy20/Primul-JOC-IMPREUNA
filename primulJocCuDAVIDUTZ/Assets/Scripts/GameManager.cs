@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
     public Text darkLoadProgress;
     public void Play(int sceneIndex)
     {
-        sceneIndex = PlayerPrefs.GetInt("Progress");
+        sceneIndex = PlayerPrefs.GetInt("Progress", 2);
         StartCoroutine(LoadAsynchronously(sceneIndex));
 
     }
@@ -146,11 +146,11 @@ public class GameManager : MonoBehaviour
             if (!DarkTheme)
             {
                 slider.value = progress;
-                loadProgress.text = progress * 100f + "%";
+                loadProgress.text = (int) progress * 100f + "%";
             }else
             {
                 darkSlider.value = progress;
-                darkLoadProgress.text = progress * 100f + "%";
+                darkLoadProgress.text = (int) progress * 100f + "%";
             }
             yield return null;
         }
