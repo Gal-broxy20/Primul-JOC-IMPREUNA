@@ -56,4 +56,27 @@ public class DarkThemeManager : MonoBehaviour
 
     }
 
+    public GameObject Achievements;
+    public void AchievementTab()
+    {
+        StartCoroutine(AchievementTabC());
+    }
+
+    IEnumerator AchievementTabC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        menu.SetActive(false);
+        Achievements.SetActive(true);
+    }
+    public void BackFromAchievements()
+    {
+        StartCoroutine(BackFromAchievementsC());
+    }
+
+    IEnumerator BackFromAchievementsC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        Achievements.SetActive(false);
+        menu.SetActive(true);
+    }
 }

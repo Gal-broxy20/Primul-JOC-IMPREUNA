@@ -2695,7 +2695,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: sidewaysForce
-      value: 75
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}

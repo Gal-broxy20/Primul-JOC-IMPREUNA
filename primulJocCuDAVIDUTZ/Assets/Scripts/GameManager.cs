@@ -117,12 +117,15 @@ public class GameManager : MonoBehaviour
     public GameObject darkLoadingScreen;
     public Slider slider;
     public Text loadProgress;
+    public Slider darkSlider;
+    public Text darkLoadProgress;
     public void Play(int sceneIndex)
     {
         sceneIndex = PlayerPrefs.GetInt("Progress");
         StartCoroutine(LoadAsynchronously(sceneIndex));
 
     }
+    public GameObject darkMenu;
 
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
@@ -130,6 +133,7 @@ public class GameManager : MonoBehaviour
         if (DarkTheme)
         {
             darkLoadingScreen.SetActive(true);
+            darkMenu.SetActive(false);
         } else
         {
             loadingScreen.SetActive(true);
@@ -139,8 +143,15 @@ public class GameManager : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-            slider.value = progress;
-            loadProgress.text = progress * 100f + "%";
+            if (!DarkTheme)
+            {
+                slider.value = progress;
+                loadProgress.text = progress * 100f + "%";
+            }else
+            {
+                darkSlider.value = progress;
+                darkLoadProgress.text = progress * 100f + "%";
+            }
             yield return null;
         }
     }
