@@ -668,7 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2122242610}
   smoothSpeed: 120
-  offset: {x: 0, y: 1.25, z: -1}
+  offset: {x: 0, y: 1.25, z: -1.5}
 --- !u!1 &68122507
 GameObject:
   m_ObjectHideFlags: 0
@@ -14436,12 +14436,12 @@ PrefabInstance:
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: forwardforce
-      value: 1000
+      value: 1700
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: sidewaysForce
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
