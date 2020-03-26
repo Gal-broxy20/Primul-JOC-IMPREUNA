@@ -40,9 +40,14 @@ public class scortrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        gameManager.LoadNextLevel();
+        StartCoroutine("FinishedTut");
         PlayerPrefs.SetInt("HasPlayedTutorial", 1);
     }
-
+    IEnumerator FinishedTut()
+    {
+        animator.SetBool("ESC", true);
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(1);
+    }
     
 }
