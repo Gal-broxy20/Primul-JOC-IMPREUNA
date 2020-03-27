@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 0
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -2308,8 +2308,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 0.9843138, g: 0.9686275, b: 0.9058824, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2348,10 +2348,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 12
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 1.8e-43, y: 1.1383587e+10, z: 6.96e-43, w: 1.95e-43}
@@ -9545,7 +9545,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 25b662a784bf9324e83130ea540b289c,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: e473a6d0c03c3b241b4ea0ab63253449, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7a3285220cfedb545ab68875ba5cc225, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.903
   m_Pitch: 1
@@ -14436,7 +14436,7 @@ PrefabInstance:
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
       propertyPath: forwardforce
-      value: 1700
+      value: 1900
       objectReference: {fileID: 0}
     - target: {fileID: 852159400854552490, guid: 62141506da87f0540a480f981a58ebc3,
         type: 3}
