@@ -10,12 +10,19 @@ public class spawner : MonoBehaviour
     public float startTimeBtwSpawn;
     public float decreaseTime;
     public float minTime;
-    public float difBtwObst;
-    public float zet;
-    
+    public float offset = 80f;
+    public float speed = 10f;
+    public bool gameHasEnded = false;
+
+    private void Start()
+    {
+        StartCoroutine("MoveSpawner");
+    }
+
     void FixedUpdate()
     {
-        transform.position = new Vector3(0f, 1.5f, zet);
+
+        
         if (timeBtwSpawn <= 0)
         {
             int rand = Random.Range(0, obstaclePatterns.Length);
@@ -26,6 +33,14 @@ public class spawner : MonoBehaviour
         } else
         {
             timeBtwSpawn -= Time.deltaTime;
+        }
+    }
+    IEnumerator MoveSpawner()
+    {
+        while (gameHasEnded == false)
+        {
+            yield return new WaitForSeconds(startTimeBtwSpawn);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + offset);
         }
     }
 }
