@@ -9,13 +9,17 @@ public class EndlessMovement : MonoBehaviour
     {
         
     }
-    public float speed;
+
     public Rigidbody rb;
     public float sidewaysForce;
+    public float forwardforce = 1200f;
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
+
+        rb.AddForce(0, 0, forwardforce * Time.deltaTime);
+
+
         if (Input.GetKey("d"))
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
