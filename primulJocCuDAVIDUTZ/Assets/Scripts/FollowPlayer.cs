@@ -11,6 +11,8 @@ public class FollowPlayer : MonoBehaviour
     public Transform sun;
     public Material lightMat;
     public Material normalMat;
+    public Material normalCube;
+    public GameObject cube;
     void FixedUpdate()
     {
         Vector3 desiredPosition = player.position + offset;
@@ -26,6 +28,7 @@ public class FollowPlayer : MonoBehaviour
                 
                 ObjectFound.GetComponent<Renderer>().material = lightMat;
             }
+            cube.GetComponent<Renderer>().material = lightMat;
 
         }
         else if(sun.position.y >=0)
@@ -36,6 +39,7 @@ public class FollowPlayer : MonoBehaviour
 
                 ObjectFound.GetComponent<Renderer>().material = normalMat;
             }
+            cube.GetComponent<Renderer>().material = normalCube;
         }
     }
 }

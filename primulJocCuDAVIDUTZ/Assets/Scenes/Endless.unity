@@ -6087,3 +6087,5 @@ MonoBehaviour:
   sun: {fileID: 1245793480}
   lightMat: {fileID: 2100000, guid: c503a2862d03f9e46b373d3b673d8bea, type: 2}
   normalMat: {fileID: 2100000, guid: 7e97d9b9582bf3e48a08e99301a51d78, type: 2}
+  normalCube: {fileID: 2100000, guid: 8048d13ecd9d8634c89812fc74ecc502, type: 2}
+  cube: {fileID: 204468221}
