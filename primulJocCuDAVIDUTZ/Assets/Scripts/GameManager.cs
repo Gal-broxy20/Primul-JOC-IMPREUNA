@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,6 +49,11 @@ public class GameManager : MonoBehaviour
     public void LoadLevel3()
     {
         SceneManager.LoadScene("Level3");
+    }
+    
+    public void LoadEndlessMode()
+    {
+        SceneManager.LoadScene("Endless");
     }
 
     public void LoadMenu()
@@ -211,6 +217,8 @@ public class GameManager : MonoBehaviour
         Achievements.SetActive(false);
         menu.SetActive(true);
     }
+
+    
 
 
 }

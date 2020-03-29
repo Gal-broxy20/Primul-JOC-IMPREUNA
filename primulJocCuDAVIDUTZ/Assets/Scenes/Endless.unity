@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
+    m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
@@ -214,6 +214,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12499732}
   m_CullTransparentMesh: 0
+--- !u!114 &39410525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1519654467768338458, guid: fac392a807fa4bb479c0c9e45d1282c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1446013522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a305648ae6d47134e875a16d3517fa59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &84609116
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +910,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 39410525}
         m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
@@ -1688,7 +1700,7 @@ GameObject:
   - component: {fileID: 538564724}
   - component: {fileID: 538564723}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: ObstacleGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1711,10 +1723,12 @@ MonoBehaviour:
   - {fileID: 8361768706948993690, guid: ec477e78859761040a3d66a8200bac58, type: 3}
   - {fileID: 4709354758849543471, guid: b4e363f900d38e549b123fc20c67cda0, type: 3}
   - {fileID: 5248598870621356344, guid: adf2cab9236774d4a8c8b261a0e346f9, type: 3}
+  - {fileID: 3196236376389731475, guid: 96259fee34943e4489a7de14f3fc5658, type: 3}
+  - {fileID: 3196236376389731475, guid: 1329689144986a642afe0d59c5e9dc02, type: 3}
   startTimeBtwSpawn: 0.75
   decreaseTime: 0
   minTime: 0.5
-  offset: 60
+  offset: 70
 --- !u!4 &538564724
 Transform:
   m_ObjectHideFlags: 0
@@ -1723,7 +1737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538564722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 60}
+  m_LocalPosition: {x: 0, y: 1.2, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3123,7 +3137,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.40049842, g: 0.5734282, b: 0.6792453, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3162,7 +3176,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3198,7 +3212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77118980fed77a7418bc3d54b38a4c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunspeed: 2
+  sunspeed: 1
 --- !u!1 &1018178985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,6 +3466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1090257961}
   - component: {fileID: 1090257962}
+  - component: {fileID: 1090257963}
   m_Layer: 5
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -3543,6 +3558,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1090257963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090257960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705ab3d4b8ebb504b87b0808136b0b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 25b662a784bf9324e83130ea540b289c, type: 2}
 --- !u!1 &1113322751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,7 +3861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 2000
-  startTimeBtwSpawn: 15
+  startTimeBtwSpawn: 14
   TimeBtwSpawn: 0
   platforma: {fileID: 571052591}
 --- !u!1 &1199284214
@@ -3941,7 +3969,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3977,7 +4005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77118980fed77a7418bc3d54b38a4c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunspeed: 2
+  sunspeed: 1
 --- !u!1 &1282219961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,7 +4088,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 39410525}
         m_MethodName: Endgame
         m_Mode: 1
         m_Arguments:
@@ -4716,7 +4744,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 39410525}
         m_MethodName: Endgame
         m_Mode: 1
         m_Arguments:
@@ -5327,7 +5355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResumeCountdown: {fileID: 1685412091}
-  player: {fileID: 0}
+  player: {fileID: 204468228}
 --- !u!95 &1685412093
 Animator:
   serializedVersion: 3
@@ -6055,4 +6083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 204468227}
   smoothSpeed: 150
-  offset: {x: 0, y: 1, z: -2.5}
+  offset: {x: 0, y: 1.25, z: -1.5}
+  sun: {fileID: 1245793480}
+  lightMat: {fileID: 2100000, guid: c503a2862d03f9e46b373d3b673d8bea, type: 2}
+  normalMat: {fileID: 2100000, guid: 7e97d9b9582bf3e48a08e99301a51d78, type: 2}
