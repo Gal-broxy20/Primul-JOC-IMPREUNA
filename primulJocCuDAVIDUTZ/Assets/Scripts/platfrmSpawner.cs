@@ -2,41 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawner : MonoBehaviour
+public class platfrmSpawner : MonoBehaviour
 {
-    public GameObject[] obstaclePatterns;
-
-    private float timeBtwSpawn;
+    // Start is called before the first frame update
+    public float offset;
     public float startTimeBtwSpawn;
-    public float decreaseTime;
-    public float minTime;
-    public float offset = 80f;
-    
+    public float TimeBtwSpawn;
+    public GameObject platforma;
 
-
-
-    private void Start()
+    void Start()
     {
         StartCoroutine("MoveSpawner");
         
     }
 
+    // Update is called once per frame
     void FixedUpdate()
     {
-
-        
-        if (timeBtwSpawn <= 0)
+        if(TimeBtwSpawn <= 0)
         {
-            int rand = Random.Range(0, obstaclePatterns.Length);
-            Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
-            timeBtwSpawn = startTimeBtwSpawn;
-            if(startTimeBtwSpawn > minTime)
-            startTimeBtwSpawn -= decreaseTime;
+            Instantiate(platforma, transform.position, Quaternion.identity);
+            TimeBtwSpawn = startTimeBtwSpawn;
         } else
         {
-            timeBtwSpawn -= Time.deltaTime;
+            TimeBtwSpawn -= Time.deltaTime;
         }
     }
+
     IEnumerator MoveSpawner()
     {
         Collision playerScript = GameObject.Find("Player").GetComponent<Collision>();
