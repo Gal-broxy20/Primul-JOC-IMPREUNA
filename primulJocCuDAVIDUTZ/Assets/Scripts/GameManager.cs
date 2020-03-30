@@ -64,6 +64,9 @@ public class GameManager : MonoBehaviour
     public GameObject levels;
     public GameObject menu;
     public GameObject settings;
+    public GameObject darklevels;
+    public GameObject darkMenu;
+    public GameObject darksettings;
     public void GoToLevelSelection()
     {
         StartCoroutine(GoToLevelSelectionC());
@@ -72,6 +75,8 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         menu.SetActive(false);
+        darkMenu.SetActive(false);
+        darklevels.SetActive(true);
         levels.SetActive(true);
     }
     public void BackFromLevelSelection()
@@ -82,6 +87,8 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         levels.SetActive(false);
+        darklevels.SetActive(false);
+        darkMenu.SetActive(true);
         menu.SetActive(true);
     }
     
@@ -94,6 +101,8 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         menu.SetActive(false);
+        darkMenu.SetActive(false);
+        darksettings.SetActive(true);
         settings.SetActive(true);
 
     }
@@ -107,6 +116,8 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         settings.SetActive(false);
+        darksettings.SetActive(false);
+        darkMenu.SetActive(true);
         menu.SetActive(true);
         
 
@@ -125,39 +136,37 @@ public class GameManager : MonoBehaviour
     public Text loadProgress;
     public Slider darkSlider;
     public Text darkLoadProgress;
+    public GameObject lvlCompmsg;
     public void Play(int sceneIndex)
     {
         sceneIndex = PlayerPrefs.GetInt("Progress", 2);
-        StartCoroutine(LoadAsynchronously(sceneIndex));
+        if (sceneIndex == 5)
+        {
+            lvlCompmsg.SetActive(true);
+        }
+        else
+        {
+            StartCoroutine(LoadAsynchronously(sceneIndex));
 
-    }
-    public GameObject darkMenu;
+        }
+        }
+    
 
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
         yield return new WaitForSeconds(0.25f);
-        if (DarkTheme)
-        {
             darkLoadingScreen.SetActive(true);
             darkMenu.SetActive(false);
-        } else
-        {
             loadingScreen.SetActive(true);
-        }
         yield return new WaitForSeconds(1.5f);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-            if (!DarkTheme)
-            {
-                slider.value = progress;
-                loadProgress.text = (int) progress * 100f + "%";
-            }else
-            {
-                darkSlider.value = progress;
-                darkLoadProgress.text = (int) progress * 100f + "%";
-            }
+            slider.value = progress;
+            loadProgress.text = (int) progress * 100f + "%";
+            darkSlider.value = progress;
+            darkLoadProgress.text = (int) progress * 100f + "%";
             yield return null;
         }
     }
@@ -195,6 +204,7 @@ public class GameManager : MonoBehaviour
         DarkTheme = false;
     }
     public GameObject Achievements;
+    public GameObject DarkAchievements;
     public void AchievementTab ()
     {
         StartCoroutine(AchievementTabC());
@@ -204,7 +214,9 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         menu.SetActive(false);
+        darkMenu.SetActive(false);
         Achievements.SetActive(true);
+        DarkAchievements.SetActive(true);
     }
     public void BackFromAchievements ()
     {
@@ -216,9 +228,60 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         Achievements.SetActive(false);
         menu.SetActive(true);
+        DarkAchievements.SetActive(false);
+        darkMenu.SetActive(true);
     }
 
-    
+    public GameObject DifficultyScreen;
+    public GameObject DarkDiffScreen;
+    public void SelectEndlessDifficulty()
+    {
+        StartCoroutine("SelectEndlessDifficultyC");
+    }
+    IEnumerator SelectEndlessDifficultyC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        levels.SetActive(false);
+        darklevels.SetActive(false);
+        DarkDiffScreen.SetActive(true);
+        DifficultyScreen.SetActive(true);
+    }
 
+    public void BackFromDifficultySelection()
+    {
+        StartCoroutine("BackFromDiffSelC");
+    }
+    IEnumerator BackFromDiffSelC()
+    {
+        yield return new WaitForSeconds(0.25f);
+        levels.SetActive(true);
+        darklevels.SetActive(true);
+        DarkDiffScreen.SetActive(false);
+        DifficultyScreen.SetActive(false);
+    }
 
+     public void SelectEasyDifficulty()
+    {
+        PlayerPrefs.SetInt("EndlessDiff", 75);
+    }
+    public void SelectMediumDifficulty()
+    {
+        PlayerPrefs.SetInt("EndlessDiff", 70);
+    }
+    public void SelectHardDifficulty()
+    {
+        PlayerPrefs.SetInt("EndlessDiff", 65);
+    }
+
+    public Animator animator;
+    public void ResetHighScores()
+    {
+        animator.SetTrigger("HighReset");
+        animator.SetTrigger("DarkHighReset");
+        PlayerPrefs.SetInt("HighScoreLvl1", 0);
+        PlayerPrefs.SetInt("HighScoreLvl3", 0);
+        PlayerPrefs.SetInt("HighScoreLvl2", 0);
+        PlayerPrefs.SetInt("HighScoreEndlessMode", 0);
+        PlayerPrefs.SetInt("EndlessHighScoreDiff", 0);
+    }
 }

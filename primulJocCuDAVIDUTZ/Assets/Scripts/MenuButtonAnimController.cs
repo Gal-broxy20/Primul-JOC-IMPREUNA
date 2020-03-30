@@ -7,6 +7,32 @@ using TMPro;
 public class MenuButtonAnimController : MonoBehaviour
 {
     public Animator animator;
+    public GameObject easy;
+    public GameObject medium;
+    public GameObject hard;
+    public GameObject darkeasy;
+    public GameObject darkmedium;
+    public GameObject darkhard;
+    public void Start()
+    {
+        int HighDiff = PlayerPrefs.GetInt("EndlessHighScoreDiff", 0);
+        if(HighDiff == 65)
+        {
+            hard.SetActive(true);
+            darkhard.SetActive(true);
+        }
+        if (HighDiff == 70)
+        {
+            medium.SetActive(true);
+            darkmedium.SetActive(true);
+        }
+        if (HighDiff == 75)
+        {
+            easy.SetActive(true);
+            darkeasy.SetActive(true);
+        }
+
+    }
     public void ButtonAnimation()
     {
         if(!animator.GetBool("ButtonPress"))

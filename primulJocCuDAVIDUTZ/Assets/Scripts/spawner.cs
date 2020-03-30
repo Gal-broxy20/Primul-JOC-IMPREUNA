@@ -6,11 +6,9 @@ public class spawner : MonoBehaviour
 {
     public GameObject[] obstaclePatterns;
 
-    private float timeBtwSpawn;
+    private float timeBtwSpawn = 0f;
     public float startTimeBtwSpawn;
-    public float decreaseTime;
-    public float minTime;
-    public float offset = 80f;
+    public float offset;
     
 
 
@@ -18,21 +16,21 @@ public class spawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine("MoveSpawner");
+        offset = PlayerPrefs.GetInt("EndlessDiff", 70);
         
     }
 
     void FixedUpdate()
     {
+        Collision playerScript = GameObject.Find("Player").GetComponent<Collision>();
 
-        
-        if (timeBtwSpawn <= 0)
+        if (timeBtwSpawn <= 0 && playerScript.GameHasEnded == false)
         {
+            
             int rand = Random.Range(0, obstaclePatterns.Length);
             Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
             timeBtwSpawn = startTimeBtwSpawn;
-            if(startTimeBtwSpawn > minTime)
-            startTimeBtwSpawn -= decreaseTime;
-        } else
+        } else if (timeBtwSpawn > 0 && playerScript.GameHasEnded == false)
         {
             timeBtwSpawn -= Time.deltaTime;
         }
@@ -42,8 +40,9 @@ public class spawner : MonoBehaviour
         Collision playerScript = GameObject.Find("Player").GetComponent<Collision>();
         while (playerScript.GameHasEnded == false)
         {
-            yield return new WaitForSeconds(startTimeBtwSpawn);
+            
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + offset);
+            yield return new WaitForSeconds(startTimeBtwSpawn);
         }
     }
 }

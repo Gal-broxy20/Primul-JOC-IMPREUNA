@@ -26,7 +26,7 @@ public class endlessScore : MonoBehaviour
         scoreText.text = suma.ToString();
         if (suma > PlayerPrefs.GetInt("HighScoreEndlessMode", 0))
         {
-
+            PlayerPrefs.SetInt("EndlessHighScoreDiff", PlayerPrefs.GetInt("EndlessDiff", 70));
             PlayerPrefs.SetInt("HighScoreEndlessMode", suma);
             highScore.text = suma.ToString();
             highScoreFall.text = suma.ToString();
