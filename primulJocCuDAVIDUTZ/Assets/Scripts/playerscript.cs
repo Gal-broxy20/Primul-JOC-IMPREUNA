@@ -13,7 +13,7 @@ public class playerscript : MonoBehaviour
 
     public playerscript movement;
     public AudioSource music;
-    public float pitch = 0.7f;
+    public float pitch = 0.65f;
     public GameObject fallScreen; 
     public GameObject score;
 

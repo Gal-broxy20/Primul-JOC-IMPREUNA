@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class CrASHsCore : MonoBehaviour
 {
-    public Text scoreLevel;
-    public Text crashscore;
-    void Update()
+    public TextMeshProUGUI scoreLevel;
+    public TextMeshProUGUI crashscore;
+    void Start()
     {
         crashscore.text = scoreLevel.text;
     }

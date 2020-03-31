@@ -20,13 +20,15 @@ public class EndlessMusic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PauseMenu script = GameObject.Find("Canvas").GetComponent<PauseMenu>();
+
         timer += Time.deltaTime;
         if(timer >= newClip + 1)
         {
             newCLIP();
             timer = 0;
         }
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) && script.GameIsPaused == false)
         {
             SkipSong();
             timer = 0;
@@ -37,6 +39,7 @@ public class EndlessMusic : MonoBehaviour
     int prevClipNum;
     public TextMeshProUGUI songName;
     public GameObject songNameImage;
+    private bool AnimationIsPlaying = false;
     void newCLIP()
     {
         clipNum = Random.Range(0, clips.Length);
@@ -59,22 +62,27 @@ public class EndlessMusic : MonoBehaviour
 
     void SkipSong()
     {
-        clipNum = Random.Range(0, clips.Length);
-        while (prevClipNum == clipNum)
+        if (!AnimationIsPlaying)
         {
             clipNum = Random.Range(0, clips.Length);
+            while (prevClipNum == clipNum)
+            {
+                clipNum = Random.Range(0, clips.Length);
+            }
+            prevClipNum = clipNum;
+            source.Stop();
+            source.PlayOneShot(clips[clipNum]);
+            newClip = clips[clipNum].length;
+            songName.text = clips[clipNum].name;
+            songNameImage.SetActive(true);
+            StartCoroutine("SongNameC");
         }
-        prevClipNum = clipNum;
-        source.Stop();
-        source.PlayOneShot(clips[clipNum]);
-        newClip = clips[clipNum].length;
-        songName.text = clips[clipNum].name;
-        songNameImage.SetActive(true);
-        StartCoroutine("SongNameC");
     }
     IEnumerator SongNameC()
     {
+        AnimationIsPlaying = true;
         yield return new WaitForSeconds(2.3f);
         songNameImage.SetActive(false);
+        AnimationIsPlaying = false;
     }
 }

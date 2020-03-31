@@ -9,11 +9,11 @@ public class endlessScore : MonoBehaviour
     public Transform player;
     public TextMeshProUGUI scoreText;
     public int offset = 0;
-    public Text highScore;
+    public TextMeshProUGUI highScore;
     public GameObject NewHighScoreText;
 
 
-    public Text highScoreFall;
+    public TextMeshProUGUI highScoreFall;
     public GameObject NewHighScoreTextFall;
     int suma;
     void Start()
