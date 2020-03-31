@@ -13,6 +13,5 @@ public class Endtrigger : MonoBehaviour
         gameManager.CompleteLevel();
         stop.enabled = false;
         index = SceneManager.GetActiveScene().buildIndex;
-        PlayerPrefs.SetInt("Progress", index + 1);
     }
 }

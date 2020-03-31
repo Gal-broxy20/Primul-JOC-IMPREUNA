@@ -38,18 +38,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LoadLevel1()
-    {
-        SceneManager.LoadScene("Level1");
-    }
-    public void LoadLevel2()
-    {
-        SceneManager.LoadScene("Level2");
-    }
-    public void LoadLevel3()
-    {
-        SceneManager.LoadScene("Level3");
-    }
+
     
     public void LoadEndlessMode()
     {
@@ -139,18 +128,22 @@ public class GameManager : MonoBehaviour
     public GameObject lvlCompmsg;
     public void Play(int sceneIndex)
     {
-        sceneIndex = PlayerPrefs.GetInt("Progress", 2);
-        if (sceneIndex == 5)
-        {
-            lvlCompmsg.SetActive(true);
-        }
-        else
-        {
-            StartCoroutine(LoadAsynchronously(sceneIndex));
-
-        }
-        }
+        
+        StartCoroutine(LoadAsynchronously(sceneIndex));
+    }
     
+    public void Level1()
+    {
+        Play(2);
+    }
+    public void Level2()
+    {
+        Play(3);
+    }
+    public void Level3()
+    {
+        Play(4);
+    }
 
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
