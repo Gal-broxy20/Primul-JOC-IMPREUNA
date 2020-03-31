@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using TMPro;
 
 public class EndlessMusic : MonoBehaviour
 {
@@ -33,6 +35,8 @@ public class EndlessMusic : MonoBehaviour
 
     int clipNum;
     int prevClipNum;
+    public TextMeshProUGUI songName;
+    public GameObject songNameImage;
     void newCLIP()
     {
         clipNum = Random.Range(0, clips.Length);
@@ -45,6 +49,10 @@ public class EndlessMusic : MonoBehaviour
         {
             source.loop = true;
             source.PlayOneShot(clips[clipNum]);
+            songName.text = clips[clipNum].name;
+            songNameImage.SetActive(true);
+            StartCoroutine("SongNameC");
+
         }
         newClip = clips[clipNum].length;
     }
@@ -60,5 +68,13 @@ public class EndlessMusic : MonoBehaviour
         source.Stop();
         source.PlayOneShot(clips[clipNum]);
         newClip = clips[clipNum].length;
+        songName.text = clips[clipNum].name;
+        songNameImage.SetActive(true);
+        StartCoroutine("SongNameC");
+    }
+    IEnumerator SongNameC()
+    {
+        yield return new WaitForSeconds(2.3f);
+        songNameImage.SetActive(false);
     }
 }

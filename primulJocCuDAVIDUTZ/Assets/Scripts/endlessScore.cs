@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class endlessScore : MonoBehaviour
 {
     public Transform player;
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     public int offset = 0;
     public Text highScore;
     public GameObject NewHighScoreText;
