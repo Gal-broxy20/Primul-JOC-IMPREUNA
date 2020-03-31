@@ -4411,15 +4411,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 204468228}
   clips:
-  - {fileID: 8300000, guid: 15b240e595fe3a54d830d0f974c192da, type: 3}
-  - {fileID: 8300000, guid: 7a3285220cfedb545ab68875ba5cc225, type: 3}
+  - {fileID: 8300000, guid: e473a6d0c03c3b241b4ea0ab63253449, type: 3}
+  - {fileID: 8300000, guid: 9dfc15d24ae110248b14d0a57c6c373f, type: 3}
   - {fileID: 8300000, guid: 9b9fe7777a858c24f9a78e0b982e5f48, type: 3}
   - {fileID: 8300000, guid: 9fdf0c87fc3e3724cad4813b0d68ec66, type: 3}
-  - {fileID: 8300000, guid: 6f85f2add58153e4f84240c3c06786f3, type: 3}
+  - {fileID: 0}
   - {fileID: 8300000, guid: 34d2e5d33cc3b174e8ff3ac2dbd3ace8, type: 3}
-  - {fileID: 8300000, guid: 9dfc15d24ae110248b14d0a57c6c373f, type: 3}
-  - {fileID: 8300000, guid: cd99acdf828cd864f9533b50e82ccfa2, type: 3}
-  - {fileID: 8300000, guid: e473a6d0c03c3b241b4ea0ab63253449, type: 3}
   timer: 0
   newClip: 0
 --- !u!4 &1370871621
