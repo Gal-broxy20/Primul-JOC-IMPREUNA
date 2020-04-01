@@ -204,7 +204,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1872805172}
   m_HandleRect: {fileID: 2030353596}
   m_Direction: 0
-  m_MinValue: -30
+  m_MinValue: -50
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -269,11 +269,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 38949613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d818e665221c1245a1c62028c810abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 96417f6c431b1064fa2903f0ab0ea6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreLevel: {fileID: 479334855}
-  crashscore: {fileID: 38949616}
+  CrASHScore: {fileID: 38949616}
+  slevel: {fileID: 479334855}
 --- !u!114 &38949616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.62727237, b: 1, a: 0.78039217}
+  m_Color: {r: 1, g: 0.43595478, b: 0.3254717, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1099,11 +1099,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 134930494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d818e665221c1245a1c62028c810abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 96417f6c431b1064fa2903f0ab0ea6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreLevel: {fileID: 479334855}
-  crashscore: {fileID: 134930497}
+  CrASHScore: {fileID: 134930497}
+  slevel: {fileID: 479334855}
 --- !u!114 &134930497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5358,11 +5358,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1098084893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d818e665221c1245a1c62028c810abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 96417f6c431b1064fa2903f0ab0ea6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreLevel: {fileID: 479334855}
-  crashscore: {fileID: 1098084896}
+  CrASHScore: {fileID: 1098084896}
+  slevel: {fileID: 479334855}
 --- !u!114 &1098084896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6918,7 +6918,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 6f85f2add58153e4f84240c3c06786f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.903
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9434,7 +9434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.33333334, g: 0.42352945, b: 0.5764706, a: 1}
+  m_Color: {r: 0.6415094, g: 0.08802038, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10237,7 +10237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08627451, g: 0.18431373, b: 0.36862746, a: 1}
+  m_Color: {r: 0.6156863, g: 0.23529413, b: 0.16078432, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

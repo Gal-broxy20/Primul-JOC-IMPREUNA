@@ -21,6 +21,7 @@ public class EndlessMusic : MonoBehaviour
     void Update()
     {
         PauseMenu script = GameObject.Find("Canvas").GetComponent<PauseMenu>();
+        Collision otherScript = GameObject.Find("Player").GetComponent<Collision>();
 
         timer += Time.deltaTime;
         if(timer >= newClip + 1)
@@ -28,7 +29,7 @@ public class EndlessMusic : MonoBehaviour
             newCLIP();
             timer = 0;
         }
-        if(Input.GetKeyDown(KeyCode.E) && script.GameIsPaused == false)
+        if(Input.GetKeyDown(KeyCode.E) && script.GameIsPaused == false && otherScript.GameHasEnded == false)
         {
             SkipSong();
             timer = 0;

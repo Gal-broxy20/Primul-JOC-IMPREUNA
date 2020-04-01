@@ -10991,11 +10991,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1101154913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d818e665221c1245a1c62028c810abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 96417f6c431b1064fa2903f0ab0ea6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreLevel: {fileID: 1879789645}
-  crashscore: {fileID: 1101154916}
+  CrASHScore: {fileID: 1101154916}
+  slevel: {fileID: 1879789645}
 --- !u!114 &1101154916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11286,11 +11286,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1121105938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d818e665221c1245a1c62028c810abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 96417f6c431b1064fa2903f0ab0ea6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreLevel: {fileID: 1879789645}
-  crashscore: {fileID: 1121105941}
+  CrASHScore: {fileID: 1121105941}
+  slevel: {fileID: 1879789645}
 --- !u!114 &1121105941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12453,7 +12453,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 15b240e595fe3a54d830d0f974c192da, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16793,11 +16793,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766033230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d818e665221c1245a1c62028c810abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 96417f6c431b1064fa2903f0ab0ea6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreLevel: {fileID: 1879789645}
-  crashscore: {fileID: 1766033233}
+  CrASHScore: {fileID: 1766033233}
+  slevel: {fileID: 1879789645}
 --- !u!114 &1766033233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17442,7 +17442,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1475507965}
   m_HandleRect: {fileID: 1249866213}
   m_Direction: 0
-  m_MinValue: -30
+  m_MinValue: -50
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0

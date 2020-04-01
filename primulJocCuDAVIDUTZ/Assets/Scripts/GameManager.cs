@@ -145,12 +145,19 @@ public class GameManager : MonoBehaviour
         Play(4);
     }
 
+    public void EndlessLevel()
+    {
+        Play(5);
+    }
+
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
         yield return new WaitForSeconds(0.25f);
             darkLoadingScreen.SetActive(true);
             darkMenu.SetActive(false);
             loadingScreen.SetActive(true);
+        DifficultyScreen.SetActive(false);
+        DarkDiffScreen.SetActive(false);
         yield return new WaitForSeconds(1.5f);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         while (!operation.isDone)
