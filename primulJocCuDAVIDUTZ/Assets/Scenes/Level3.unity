@@ -11497,6 +11497,11 @@ PrefabInstance:
       propertyPath: m_ReceiveGI
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 852159400854552494, guid: 62141506da87f0540a480f981a58ebc3,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 62141506da87f0540a480f981a58ebc3, type: 3}
@@ -11585,6 +11590,16 @@ PrefabInstance:
     - target: {fileID: 2912315798344763724, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
       propertyPath: m_ReflectionProbeUsage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912315798344763724, guid: cafb3b52f184322409e69c0a3388c86d,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912315798344763724, guid: cafb3b52f184322409e69c0a3388c86d,
+        type: 3}
+      propertyPath: m_ReceiveGI
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2912315798344763725, guid: cafb3b52f184322409e69c0a3388c86d,

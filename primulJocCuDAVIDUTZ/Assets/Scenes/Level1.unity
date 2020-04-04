@@ -2182,6 +2182,7 @@ MonoBehaviour:
   ResumeCountdown: {fileID: 1666220592}
   quitPanel: {fileID: 673247966}
   QuitPanelIsOpen: 0
+  LevelLogo: {fileID: 0}
 --- !u!225 &159504185
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14621,7 +14622,7 @@ PrefabInstance:
     - target: {fileID: 2912315798344763714, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2912315798344763714, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
