@@ -14634,6 +14634,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 77d1003baaafc204da7765167aab4d8b, type: 2}
+    - target: {fileID: 2912315798344763724, guid: cafb3b52f184322409e69c0a3388c86d,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2912315798344763725, guid: cafb3b52f184322409e69c0a3388c86d,
         type: 3}
       propertyPath: m_Material
