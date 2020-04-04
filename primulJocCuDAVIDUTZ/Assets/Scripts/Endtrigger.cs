@@ -9,9 +9,13 @@ public class Endtrigger : MonoBehaviour
 
     void OnTriggerEnter(UnityEngine.Collider other)
     {
-        Debug.Log("Level Finished");
-        gameManager.CompleteLevel();
-        stop.enabled = false;
-        index = SceneManager.GetActiveScene().buildIndex;
+        Collision script = GameObject.Find("Player").GetComponent<Collision>();
+        if (script.GameHasEnded == false)
+        {
+            Debug.Log("Level Finished");
+            gameManager.CompleteLevel();
+            stop.enabled = false;
+            index = SceneManager.GetActiveScene().buildIndex;
+        }
     }
 }

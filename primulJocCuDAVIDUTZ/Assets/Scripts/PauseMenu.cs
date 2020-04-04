@@ -71,4 +71,16 @@ public class PauseMenu : MonoBehaviour
         quitPanel.SetActive(false);
         QuitPanelIsOpen = false;
     }
+
+    public GameObject LevelLogo;
+     void Start()
+    {
+        StartCoroutine("StartOfLevel");
+    }
+
+    IEnumerator StartOfLevel()
+    {
+        yield return new WaitForSeconds(2.33f);
+        LevelLogo.SetActive(false);
+    }
 }
